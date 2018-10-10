@@ -37,14 +37,14 @@ public final class RekeyGenerator {
         let xa = PrimeFieldElement.fromBytes(randomXbytes, field: field)
         let Xa = (xa.nativeValue * parameters.G).toAffine()
         let ephemDHPoint = xa.nativeValue * delegateeKey.pubkey
-        let dhInZq = try parameters.H3((Xa as! T.AffinePointType,
-                                    delegateeKey.pubkey as! T.AffinePointType, ephemDHPoint.toAffine() as! T.AffinePointType))
+        let dhInZq = try parameters.H3((Xa,
+                                    delegateeKey.pubkey, ephemDHPoint.toAffine()))
         let d = PrimeFieldElement.fromValue(dhInZq, field: field)
         let a = PrimeFieldElement.fromValue(privateKey, field: field)
         let f0 = a * (d.inv())
         let DHPoint = a.nativeValue * delegateeKey.pubkey
-        let D = try parameters.H3((delegatorKey.pubkey as! T.AffinePointType,
-                                   delegateeKey.pubkey as! T.AffinePointType, DHPoint.toAffine() as! T.AffinePointType))
+        let D = try parameters.H3((delegatorKey.pubkey,
+                                   delegateeKey.pubkey, DHPoint.toAffine()))
         if threshold == 1 {
             guard let randomYbytes = getRandomBytes(length: keyLength) else {
                 throw Error.noEntropy
@@ -62,8 +62,8 @@ public final class RekeyGenerator {
             var toHash = Data()
             toHash.append(parameters.serializePoint(Y)!)
             toHash.append(id.nativeValue.bytes)
-            toHash.append(parameters.serializePoint(delegatorKey.pubkey as! T.AffinePointType)!)
-            toHash.append(parameters.serializePoint(delegateeKey.pubkey as! T.AffinePointType)!)
+            toHash.append(parameters.serializePoint(delegatorKey.pubkey)!)
+            toHash.append(parameters.serializePoint(delegateeKey.pubkey)!)
             toHash.append(parameters.serializePoint(U1)!)
             toHash.append(parameters.serializePoint(Xa)!)
             let h = parameters.hashFunction(toHash)

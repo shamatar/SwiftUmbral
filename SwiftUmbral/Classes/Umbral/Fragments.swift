@@ -1,9 +1,5 @@
-//
-//  fragments.swift
-//  ReEncryptHealth
-//
-//  Created by Anton Grigorev on 06.10.2018.
-//  Copyright © 2018 Anton Grigorev. All rights reserved.
+//  Created by Alex Vlasov on 09/10/2018.
+//  Copyright © 2018 Alex Vlasov. All rights reserved.
 //
 
 import Foundation

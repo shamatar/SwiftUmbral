@@ -7,28 +7,37 @@
 //
 
 import XCTest
+import EllipticSwift
+import BigInt
+import CryptoSwift
+
 @testable import SwiftUmbral
 
 class SwiftUmbralTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func hashFunc(_ data: Data) -> Data {
+        return data.sha3(.keccak256)
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func kdf(_ data: Data) -> Data {
+        return data.sha3(.keccak512)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testEncapsulation() {
+        let curve = EllipticSwift.bn256Curve
+        let generatorX = BigUInt("1", radix: 10)!
+        let generatorY = BigUInt("2", radix: 10)!
+        let success = curve.testGenerator(AffineCoordinates(generatorX, generatorY))
+        XCTAssert(success, "Failed to init bn256 curve!")
+        let params = try! UmbralParameters(curve: curve, generator: (generatorX, generatorY), hashFunction: hashFunc, kdf: kdf)
+        let delegatorKey = try! UmbralKey(params: params)
+        let delegateeKey = try! UmbralKey(params: params)
+        let res = try! Encapsulator.encapsulate(parameters: params, delegatorKey: delegatorKey)
+        let capsule = res.capsule
+        let symKey = res.symmeticKey
+        let key = try! Encapsulator.decapsulate(capsule: capsule, parameters: params, delegatorKey: delegatorKey)
+        XCTAssert(key == symKey)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    
+    
 }

@@ -13,6 +13,8 @@ target 'SwiftUmbral' do
 
   target 'SwiftUmbralTests' do
     inherit! :search_paths
+    import_pods
+    use_frameworks!
     # Pods for testing
   end
 

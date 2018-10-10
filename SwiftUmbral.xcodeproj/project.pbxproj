@@ -11,14 +11,11 @@
 		81F0054A216D1BFB00770786 /* SwiftUmbral.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F00540216D1BFA00770786 /* SwiftUmbral.framework */; };
 		81F0054F216D1BFB00770786 /* SwiftUmbralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0054E216D1BFB00770786 /* SwiftUmbralTests.swift */; };
 		81F00551216D1BFB00770786 /* SwiftUmbral.h in Headers */ = {isa = PBXBuildFile; fileRef = 81F00543216D1BFA00770786 /* SwiftUmbral.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		81F00566216D1EDC00770786 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0055D216D1EDC00770786 /* utils.swift */; };
-		81F00567216D1EDC00770786 /* signing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0055E216D1EDC00770786 /* signing.swift */; };
+		81F00566216D1EDC00770786 /* Encapsulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0055D216D1EDC00770786 /* Encapsulate.swift */; };
 		81F00568216D1EDC00770786 /* Fragments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0055F216D1EDC00770786 /* Fragments.swift */; };
 		81F00569216D1EDC00770786 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F00560216D1EDC00770786 /* Keys.swift */; };
-		81F0056A216D1EDC00770786 /* dem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F00561216D1EDC00770786 /* dem.swift */; };
-		81F0056B216D1EDC00770786 /* point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F00562216D1EDC00770786 /* point.swift */; };
+		81F0056B216D1EDC00770786 /* Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F00562216D1EDC00770786 /* Capsule.swift */; };
 		81F0056C216D1EDC00770786 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F00563216D1EDC00770786 /* Params.swift */; };
-		81F0056D216D1EDC00770786 /* pre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F00564216D1EDC00770786 /* pre.swift */; };
 		81F0056F216DE92700770786 /* ReKeyGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0056E216DE92700770786 /* ReKeyGen.swift */; };
 		A1CB58137B69D971F0AB7696 /* Pods_SwiftUmbral.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE133F143BAF8DB47ADC8D3 /* Pods_SwiftUmbral.framework */; };
 /* End PBXBuildFile section */
@@ -42,14 +39,11 @@
 		81F00549216D1BFB00770786 /* SwiftUmbralTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUmbralTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F0054E216D1BFB00770786 /* SwiftUmbralTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUmbralTests.swift; sourceTree = "<group>"; };
 		81F00550216D1BFB00770786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81F0055D216D1EDC00770786 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
-		81F0055E216D1EDC00770786 /* signing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signing.swift; sourceTree = "<group>"; };
+		81F0055D216D1EDC00770786 /* Encapsulate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encapsulate.swift; sourceTree = "<group>"; };
 		81F0055F216D1EDC00770786 /* Fragments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fragments.swift; sourceTree = "<group>"; };
 		81F00560216D1EDC00770786 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
-		81F00561216D1EDC00770786 /* dem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dem.swift; sourceTree = "<group>"; };
-		81F00562216D1EDC00770786 /* point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point.swift; sourceTree = "<group>"; };
+		81F00562216D1EDC00770786 /* Capsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capsule.swift; sourceTree = "<group>"; };
 		81F00563216D1EDC00770786 /* Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
-		81F00564216D1EDC00770786 /* pre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pre.swift; sourceTree = "<group>"; };
 		81F0056E216DE92700770786 /* ReKeyGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReKeyGen.swift; sourceTree = "<group>"; };
 		9C30DDD34E8410C047EA41B2 /* Pods-SwiftUmbralTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUmbralTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftUmbralTests/Pods-SwiftUmbralTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FE133F143BAF8DB47ADC8D3 /* Pods_SwiftUmbral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUmbral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,14 +131,11 @@
 		81F0055B216D1EBD00770786 /* Umbral */ = {
 			isa = PBXGroup;
 			children = (
-				81F00561216D1EDC00770786 /* dem.swift */,
 				81F0055F216D1EDC00770786 /* Fragments.swift */,
 				81F00560216D1EDC00770786 /* Keys.swift */,
 				81F00563216D1EDC00770786 /* Params.swift */,
-				81F00562216D1EDC00770786 /* point.swift */,
-				81F00564216D1EDC00770786 /* pre.swift */,
-				81F0055E216D1EDC00770786 /* signing.swift */,
-				81F0055D216D1EDC00770786 /* utils.swift */,
+				81F00562216D1EDC00770786 /* Capsule.swift */,
+				81F0055D216D1EDC00770786 /* Encapsulate.swift */,
 				81F0056E216DE92700770786 /* ReKeyGen.swift */,
 			);
 			path = Umbral;
@@ -202,6 +193,7 @@
 				81F00545216D1BFB00770786 /* Sources */,
 				81F00546216D1BFB00770786 /* Frameworks */,
 				81F00547216D1BFB00770786 /* Resources */,
+				4B0F65322AB7A748A154A06D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,6 +260,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4B0F65322AB7A748A154A06D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUmbralTests/Pods-SwiftUmbralTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/EllipticSwift/EllipticSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EllipticSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUmbralTests/Pods-SwiftUmbralTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9C973EEE1353B4A4143C2FB5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,15 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81F0056B216D1EDC00770786 /* point.swift in Sources */,
+				81F0056B216D1EDC00770786 /* Capsule.swift in Sources */,
 				81F00569216D1EDC00770786 /* Keys.swift in Sources */,
-				81F00567216D1EDC00770786 /* signing.swift in Sources */,
 				81F0056C216D1EDC00770786 /* Params.swift in Sources */,
 				81F00568216D1EDC00770786 /* Fragments.swift in Sources */,
-				81F0056D216D1EDC00770786 /* pre.swift in Sources */,
 				81F0056F216DE92700770786 /* ReKeyGen.swift in Sources */,
-				81F0056A216D1EDC00770786 /* dem.swift in Sources */,
-				81F00566216D1EDC00770786 /* utils.swift in Sources */,
+				81F00566216D1EDC00770786 /* Encapsulate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
