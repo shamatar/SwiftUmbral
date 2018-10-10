@@ -40,7 +40,7 @@ public class UmbralParameters<T> where T: PrimeFieldProtocol {
     public init(curve: EllipticSwift.WeierstrassCurve<T>, generator: (X: BigUInt, Y: BigUInt), hashFunction: @escaping HashFunction, kdf: @escaping HashFunction) throws {
         self.curve = curve
         self.curveKeySizeBytes = Int((self.curve.order.bitWidth + 7) / 8)
-        self.curveFieldSizeBytes = Int(T.UnderlyingRawType.zero.fullBitWidth)
+        self.curveFieldSizeBytes = Int((T.UnderlyingRawType.zero.fullBitWidth + 7) / 8)
         self.curveOrderField = NaivePrimeField.init(self.curve.order)
         
         guard let G = self.curve.toPoint(generator.X, generator.Y) else {
@@ -61,10 +61,15 @@ public class UmbralParameters<T> where T: PrimeFieldProtocol {
     
     // does not compress
     public func serializePoint(_ p: EllipticSwift.WeierstrassCurve<T>.AffineType) -> Data? {
-        let coordinates = self.G.coordinates
+        let coordinates = p.coordinates
         guard let dataX = padToBytes(coordinates.X.serialize(), length: self.curveFieldSizeBytes) else { return nil }
         guard let dataY = padToBytes(coordinates.Y.serialize(), length: self.curveFieldSizeBytes) else { return nil }
         return dataX + dataY
+    }
+    
+    public func serializeZq(_ e: RawType) -> Data? {
+        let data = e.bytes
+        return padToBytes(data, length: self.curveKeySizeBytes)
     }
     
     func padToBytes(_ data: Data, length: Int) -> Data? {

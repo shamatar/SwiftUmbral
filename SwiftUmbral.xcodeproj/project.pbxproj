@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2095E1A6E2AD24561DBE74F9 /* Pods_SwiftUmbralTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0CD6CDF5136BBDD9D67939 /* Pods_SwiftUmbralTests.framework */; };
+		81C309C0216E4F67009D7463 /* Reencapsulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C309BF216E4F67009D7463 /* Reencapsulator.swift */; };
+		81C309C2216E4FBC009D7463 /* CapsuleFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C309C1216E4FBC009D7463 /* CapsuleFragment.swift */; };
 		81F0054A216D1BFB00770786 /* SwiftUmbral.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F00540216D1BFA00770786 /* SwiftUmbral.framework */; };
 		81F0054F216D1BFB00770786 /* SwiftUmbralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0054E216D1BFB00770786 /* SwiftUmbralTests.swift */; };
 		81F00551216D1BFB00770786 /* SwiftUmbral.h in Headers */ = {isa = PBXBuildFile; fileRef = 81F00543216D1BFA00770786 /* SwiftUmbral.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		05DB8326E8306280C8B0676E /* Pods-SwiftUmbralTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUmbralTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUmbralTests/Pods-SwiftUmbralTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66167890F982FDD17562B028 /* Pods-SwiftUmbral.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUmbral.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUmbral/Pods-SwiftUmbral.debug.xcconfig"; sourceTree = "<group>"; };
+		81C309BF216E4F67009D7463 /* Reencapsulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reencapsulator.swift; sourceTree = "<group>"; };
+		81C309C1216E4FBC009D7463 /* CapsuleFragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleFragment.swift; sourceTree = "<group>"; };
 		81F00540216D1BFA00770786 /* SwiftUmbral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUmbral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F00543216D1BFA00770786 /* SwiftUmbral.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftUmbral.h; sourceTree = "<group>"; };
 		81F00544216D1BFA00770786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				81F00562216D1EDC00770786 /* Capsule.swift */,
 				81F0055D216D1EDC00770786 /* Encapsulate.swift */,
 				81F0056E216DE92700770786 /* ReKeyGen.swift */,
+				81C309BF216E4F67009D7463 /* Reencapsulator.swift */,
+				81C309C1216E4FBC009D7463 /* CapsuleFragment.swift */,
 			);
 			path = Umbral;
 			sourceTree = "<group>";
@@ -340,11 +346,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				81F0056B216D1EDC00770786 /* Capsule.swift in Sources */,
+				81C309C2216E4FBC009D7463 /* CapsuleFragment.swift in Sources */,
 				81F00569216D1EDC00770786 /* Keys.swift in Sources */,
 				81F0056C216D1EDC00770786 /* Params.swift in Sources */,
 				81F00568216D1EDC00770786 /* Fragments.swift in Sources */,
 				81F0056F216DE92700770786 /* ReKeyGen.swift in Sources */,
 				81F00566216D1EDC00770786 /* Encapsulate.swift in Sources */,
+				81C309C0216E4F67009D7463 /* Reencapsulator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

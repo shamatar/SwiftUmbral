@@ -5,6 +5,7 @@
 import Foundation
 import CryptoSwift
 import EllipticSwift
+import BigInt
 
 public final class Encapsulator {
     enum Error: Swift.Error {
@@ -22,20 +23,26 @@ public final class Encapsulator {
             throw Error.noEntropy
         }
         let u = PrimeFieldElement.fromBytes(randomUbytes, field: field)
+        precondition(u.nativeValue < parameters.curve.order)
         let V = (u.nativeValue * parameters.G).toAffine()
         
         guard let randomRbytes = getRandomBytes(length: keyLength) else {
             throw Error.noEntropy
         }
+        if randomRbytes == randomUbytes {
+            throw Error.noEntropy
+        }
         let r = PrimeFieldElement.fromBytes(randomRbytes, field: field)
+        precondition(r.nativeValue < parameters.curve.order)
         let E = (r.nativeValue * parameters.G).toAffine()
         
         let hNative = try parameters.H2((E, V))
         let h = PrimeFieldElement.fromValue(hNative, field: field)
         let s = u + h*r
-        
-        let point = ((r + u).nativeValue * delegatorKey.pubkey).toAffine()
-        let K = parameters.KDF(parameters.serializePoint(point)!)
+        let scalar = (r + u).nativeValue
+        let point = (scalar * delegatorKey.pubkey).toAffine()
+        let pointSerialization = parameters.serializePoint(point)!
+        let K = parameters.KDF(pointSerialization)
         var capsule = Capsule(params: parameters)
         capsule.E = E
         capsule.V = V
@@ -48,7 +55,6 @@ public final class Encapsulator {
             return false
         }
         let hNative = try parameters.H2((capsule.E!, capsule.V!))
-        
         let lhs = (capsule.s! * parameters.G).toAffine()
         let rhs = ((hNative * capsule.E!).toAffine() + capsule.V!).toAffine()
         return lhs == rhs
@@ -66,8 +72,10 @@ public final class Encapsulator {
         guard let nativeA = T.RawType(pk.serialize()) else {
             throw Error.invalidDelegatorKey
         }
-        let point = (nativeA * (capsule.E! + capsule.V!)).toAffine()
-        let K = parameters.KDF(parameters.serializePoint(point)!)
+        let base = (capsule.E! + capsule.V!).toAffine()
+        let point = (nativeA * base).toAffine()
+        let pointSerialization = parameters.serializePoint(point)!
+        let K = parameters.KDF(pointSerialization)
         return K
     }
 }
