@@ -23,7 +23,7 @@ public final class RekeyGenerator {
                                              delegateeKey: UmbralKey<T, U>,
                                              numFragments: Int,
                                              threshold: Int) throws -> [KeyFragment<T, U>]? where T: UmbralParameters<U>, U: PrimeFieldProtocol {
-        if numFragments <= threshold {
+        if numFragments < threshold {
             throw Error.invalidThreshold
         }
         guard let privateKey = delegatorKey.bnKey else {
@@ -45,7 +45,7 @@ public final class RekeyGenerator {
         let DHPoint = a.nativeValue * delegateeKey.pubkey
         let D = try parameters.H3((delegatorKey.pubkey,
                                    delegateeKey.pubkey, DHPoint.toAffine()))
-        if threshold == 1 {
+        if threshold == 1 && numFragments == 1 {
             guard let randomYbytes = getRandomBytes(length: keyLength) else {
                 throw Error.noEntropy
             }

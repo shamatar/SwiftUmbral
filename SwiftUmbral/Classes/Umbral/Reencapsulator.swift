@@ -78,8 +78,6 @@ public final class Reencapsulator {
             let base = Eprime + Vprime
             let point = (d * base).toAffine()
             let pointSerialization = parameters.serializePoint(point)!
-            print("Serialized point")
-            print(pointSerialization.toHexString())
             let K = parameters.KDF(pointSerialization)
             return K
         } else {
