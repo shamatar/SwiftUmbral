@@ -2,13 +2,13 @@ PODS:
   - BigInt (3.1.0):
     - SipHash (~> 1.2)
   - CryptoSwift (0.12.0)
-  - EllipticSwift (2.0.1):
+  - EllipticSwift (2.0.3):
     - BigInt (~> 3.1)
   - SipHash (1.2.2)
 
 DEPENDENCIES:
   - CryptoSwift (~> 0.12)
-  - EllipticSwift (~> 2.0)
+  - EllipticSwift (~> 2.0.3)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -20,9 +20,9 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
   CryptoSwift: 1c07ca50843dd48bc54e6ea53d7a4dba3b645716
-  EllipticSwift: 1b1b195bbd721a52c900f030e1e1525a150b53c0
+  EllipticSwift: 607ccc7bdd67da1152bd98a18f958b9f497daf28
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
 
-PODFILE CHECKSUM: 9e799a33e22840670b48471e953b277fdf38de6a
+PODFILE CHECKSUM: 81a8e9c98396a5a584e89dffdc1819bf41f867ed
 
 COCOAPODS: 1.6.0.beta.1

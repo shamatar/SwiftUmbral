@@ -29,9 +29,6 @@ class SwiftUmbralTests: XCTestCase {
             let bn256PrimeBUI = BigUInt("21888242871839275222246405745257275088696311157297823662689037894645226208583", radix: 10)!
             let randomBytes = BigUInt.randomInteger(lessThan: bn256PrimeBUI).serialize()
             let point = curve.hashInto(randomBytes)
-    //        let generatorX = BigUInt("1", radix: 10)!
-    //        let generatorY = BigUInt("2", radix: 10)!
-    //        let point = curve.toPoint(generatorX, generatorY)!
             let TWO = PrimeFieldElement.fromValue(UInt64(2), field: curve.field)
             var double = (TWO.nativeValue * point).toAffine()
             var added = (point + point).toAffine()
@@ -110,7 +107,7 @@ class SwiftUmbralTests: XCTestCase {
                 let fragment = fragments![0]
                 let capsuleFragment = try Reencapsulator.reencapsulate(parameters: params, capsule: capsule, fragment: fragment)
                 delegatorKey.bnKey = nil
-                let key = try Reencapsulator.decapsulateFragments(parameters: params, capsuleFragments: [capsuleFragment], delegatorKey: delegatorKey, delegateeKey: delegateeKey, treshold: 1)
+                let key = try Reencapsulator.decapsulateFragments(parameters: params, capsuleFragments: [capsuleFragment], delegatorKey: delegatorKey, delegateeKey: delegateeKey)
                 XCTAssertEqual(key.toHexString(), symKey.toHexString())
             } catch {
                 print(error)
@@ -139,7 +136,7 @@ class SwiftUmbralTests: XCTestCase {
                 let capsuleFragment = try Reencapsulator.reencapsulate(parameters: params, capsule: capsule, fragment: fragment)
                 delegatorKey.bnKey = nil
                 delegateeKey = try UmbralKey(params: params)
-                let key = try Reencapsulator.decapsulateFragments(parameters: params, capsuleFragments: [capsuleFragment], delegatorKey: delegatorKey, delegateeKey: delegateeKey, treshold: 1)
+                let key = try Reencapsulator.decapsulateFragments(parameters: params, capsuleFragments: [capsuleFragment], delegatorKey: delegatorKey, delegateeKey: delegateeKey)
                 XCTAssertNotEqual(key.toHexString(), symKey.toHexString())
             } catch {
                 print(error)
@@ -148,5 +145,66 @@ class SwiftUmbralTests: XCTestCase {
         }
     }
     
+    func testReencapsulationForManyFragments() {
+        let curve = EllipticSwift.bn256Curve
+        let generatorX = BigUInt("1", radix: 10)!
+        let generatorY = BigUInt("2", radix: 10)!
+        let success = curve.testGenerator(AffineCoordinates(generatorX, generatorY))
+        XCTAssert(success, "Failed to init bn256 curve!")
+        let params = try! UmbralParameters(curve: curve, generator: (generatorX, generatorY), hashFunction: hashFunc, kdf: kdf)
+        let threshold = 5
+        for _ in 0 ..< 10 {
+            do {
+                let delegatorKey = try UmbralKey(params: params)
+                let delegateeKey = try UmbralKey(params: params)
+                XCTAssert(delegatorKey.bnKey! != delegateeKey.bnKey!)
+                let res = try Encapsulator.encapsulate(parameters: params, delegatorKey: delegatorKey)
+                let capsule = res.capsule
+                let symKey = res.symmeticKey
+                let fragments = try RekeyGenerator.generateRekeyFragments(parameters: params, delegatorKey: delegatorKey, delegateeKey: delegateeKey, numFragments: 20, threshold: threshold)
+                let capsuleFragments = try fragments!.map { (fragment) throws -> CapsuleFragment<UmbralParameters<NaivePrimeField<U256>>, NaivePrimeField<U256>> in
+                    return try Reencapsulator.reencapsulate(parameters: params, capsule: capsule, fragment: fragment)
+                }
+                let fragmentsSlice = Array(capsuleFragments[0 ..< threshold])
+                delegatorKey.bnKey = nil
+                let key = try Reencapsulator.decapsulateFragments(parameters: params, capsuleFragments: fragmentsSlice, delegatorKey: delegatorKey, delegateeKey: delegateeKey)
+                XCTAssertEqual(key.toHexString(), symKey.toHexString())
+            } catch {
+                print(error)
+                XCTFail()
+            }
+        }
+    }
+    
+    func testReencapsulationForNotEnoughFragments() {
+        let curve = EllipticSwift.bn256Curve
+        let generatorX = BigUInt("1", radix: 10)!
+        let generatorY = BigUInt("2", radix: 10)!
+        let success = curve.testGenerator(AffineCoordinates(generatorX, generatorY))
+        XCTAssert(success, "Failed to init bn256 curve!")
+        let params = try! UmbralParameters(curve: curve, generator: (generatorX, generatorY), hashFunction: hashFunc, kdf: kdf)
+        let threshold = 5
+        for _ in 0 ..< 10 {
+            do {
+                let delegatorKey = try UmbralKey(params: params)
+                let delegateeKey = try UmbralKey(params: params)
+                XCTAssert(delegatorKey.bnKey! != delegateeKey.bnKey!)
+                let res = try Encapsulator.encapsulate(parameters: params, delegatorKey: delegatorKey)
+                let capsule = res.capsule
+                let symKey = res.symmeticKey
+                let fragments = try RekeyGenerator.generateRekeyFragments(parameters: params, delegatorKey: delegatorKey, delegateeKey: delegateeKey, numFragments: 20, threshold: threshold)
+                let capsuleFragments = try fragments!.map { (fragment) throws -> CapsuleFragment<UmbralParameters<NaivePrimeField<U256>>, NaivePrimeField<U256>> in
+                    return try Reencapsulator.reencapsulate(parameters: params, capsule: capsule, fragment: fragment)
+                }
+                let fragmentsSlice = Array(capsuleFragments[0 ..< threshold-1])
+                delegatorKey.bnKey = nil
+                let key = try Reencapsulator.decapsulateFragments(parameters: params, capsuleFragments: fragmentsSlice, delegatorKey: delegatorKey, delegateeKey: delegateeKey)
+                XCTAssertNotEqual(key.toHexString(), symKey.toHexString())
+            } catch {
+                print(error)
+                XCTFail()
+            }
+        }
+    }
     
 }

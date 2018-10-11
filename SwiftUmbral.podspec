@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "SwiftUmbral"
-s.version          = "0.1"
+s.version          = "0.5"
 s.summary          = "Umbral proxy re-encryption implementation in vanilla Swift for iOS ans macOS"
 
 s.description      = <<-DESC
@@ -22,6 +22,6 @@ s.public_header_files = "SwiftUmbral/SwiftUmbral.h"
 s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 
 s.dependency 'BigInt', '~> 3.1'
-s.dependency 'EllipticSwift', '~> 2.0'
+s.dependency 'EllipticSwift', '~> 2.0.3'
 s.dependency 'CryptoSwift', '~> 0.12'
 end

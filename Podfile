@@ -1,6 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 def import_pods
-  pod 'EllipticSwift', '~> 2.0'
+  pod 'EllipticSwift', '~> 2.0.3'
   pod 'CryptoSwift', '~> 0.12'
 end
 
