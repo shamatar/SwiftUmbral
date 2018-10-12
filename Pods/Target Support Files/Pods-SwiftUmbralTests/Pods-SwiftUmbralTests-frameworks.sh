@@ -148,16 +148,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/EllipticSwift/EllipticSwift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BigInt-macOS/BigInt.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift-macOS/CryptoSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/EllipticSwift-macOS/EllipticSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SipHash-macOS/SipHash.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/EllipticSwift/EllipticSwift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BigInt-macOS/BigInt.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift-macOS/CryptoSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/EllipticSwift-macOS/EllipticSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SipHash-macOS/SipHash.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

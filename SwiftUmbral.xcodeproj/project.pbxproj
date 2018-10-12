@@ -8,8 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		2095E1A6E2AD24561DBE74F9 /* Pods_SwiftUmbralTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0CD6CDF5136BBDD9D67939 /* Pods_SwiftUmbralTests.framework */; };
+		813F4642216F8F9200BFF958 /* SwiftUmbral_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813F4639216F8F9200BFF958 /* SwiftUmbral_iOS.framework */; };
+		813F4651216F906000BFF958 /* Fragments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0055F216D1EDC00770786 /* Fragments.swift */; };
+		813F4652216F906000BFF958 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F00560216D1EDC00770786 /* Keys.swift */; };
+		813F4653216F906000BFF958 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F00563216D1EDC00770786 /* Params.swift */; };
+		813F4654216F906000BFF958 /* Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F00562216D1EDC00770786 /* Capsule.swift */; };
+		813F4655216F906000BFF958 /* Encapsulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0055D216D1EDC00770786 /* Encapsulate.swift */; };
+		813F4656216F906000BFF958 /* ReKeyGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0056E216DE92700770786 /* ReKeyGen.swift */; };
+		813F4657216F906000BFF958 /* Reencapsulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C309BF216E4F67009D7463 /* Reencapsulator.swift */; };
+		813F4658216F906000BFF958 /* CapsuleFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C309C1216E4FBC009D7463 /* CapsuleFragment.swift */; };
+		813F4659216F906400BFF958 /* SwiftUmbral.h in Headers */ = {isa = PBXBuildFile; fileRef = 81F00543216D1BFA00770786 /* SwiftUmbral.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81C309C0216E4F67009D7463 /* Reencapsulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C309BF216E4F67009D7463 /* Reencapsulator.swift */; };
 		81C309C2216E4FBC009D7463 /* CapsuleFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C309C1216E4FBC009D7463 /* CapsuleFragment.swift */; };
+		81D8C778216F923C00D44A4C /* SwiftUmbral_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813F4646216F8F9200BFF958 /* SwiftUmbral_iOSTests.swift */; };
 		81F0054A216D1BFB00770786 /* SwiftUmbral.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F00540216D1BFA00770786 /* SwiftUmbral.framework */; };
 		81F0054F216D1BFB00770786 /* SwiftUmbralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0054E216D1BFB00770786 /* SwiftUmbralTests.swift */; };
 		81F00551216D1BFB00770786 /* SwiftUmbral.h in Headers */ = {isa = PBXBuildFile; fileRef = 81F00543216D1BFA00770786 /* SwiftUmbral.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,10 +30,19 @@
 		81F0056B216D1EDC00770786 /* Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F00562216D1EDC00770786 /* Capsule.swift */; };
 		81F0056C216D1EDC00770786 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F00563216D1EDC00770786 /* Params.swift */; };
 		81F0056F216DE92700770786 /* ReKeyGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0056E216DE92700770786 /* ReKeyGen.swift */; };
+		8CDDE3190BC021D7CEDDA394 /* Pods_SwiftUmbral_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B2AF13A849FAADF374154C /* Pods_SwiftUmbral_iOSTests.framework */; };
 		A1CB58137B69D971F0AB7696 /* Pods_SwiftUmbral.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE133F143BAF8DB47ADC8D3 /* Pods_SwiftUmbral.framework */; };
+		AF958C57B619A38067362024 /* Pods_SwiftUmbral_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1A90A8DEF11AF164920000 /* Pods_SwiftUmbral_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		813F4643216F8F9200BFF958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81F00537216D1BFA00770786 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 813F4638216F8F9200BFF958;
+			remoteInfo = SwiftUmbral_iOS;
+		};
 		81F0054B216D1BFB00770786 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 81F00537216D1BFA00770786 /* Project object */;
@@ -35,6 +55,14 @@
 /* Begin PBXFileReference section */
 		05DB8326E8306280C8B0676E /* Pods-SwiftUmbralTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUmbralTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUmbralTests/Pods-SwiftUmbralTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66167890F982FDD17562B028 /* Pods-SwiftUmbral.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUmbral.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUmbral/Pods-SwiftUmbral.debug.xcconfig"; sourceTree = "<group>"; };
+		6A1A90A8DEF11AF164920000 /* Pods_SwiftUmbral_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUmbral_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		792DACB3A499F14200CA9F5E /* Pods-SwiftUmbral_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUmbral_iOSTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftUmbral_iOSTests/Pods-SwiftUmbral_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		813F4639216F8F9200BFF958 /* SwiftUmbral_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUmbral_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		813F463B216F8F9200BFF958 /* SwiftUmbral_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftUmbral_iOS.h; sourceTree = "<group>"; };
+		813F463C216F8F9200BFF958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		813F4641216F8F9200BFF958 /* SwiftUmbral_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUmbral_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		813F4646216F8F9200BFF958 /* SwiftUmbral_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUmbral_iOSTests.swift; sourceTree = "<group>"; };
+		813F4648216F8F9200BFF958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81C309BF216E4F67009D7463 /* Reencapsulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reencapsulator.swift; sourceTree = "<group>"; };
 		81C309C1216E4FBC009D7463 /* CapsuleFragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleFragment.swift; sourceTree = "<group>"; };
 		81F00540216D1BFA00770786 /* SwiftUmbral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUmbral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,13 +77,34 @@
 		81F00562216D1EDC00770786 /* Capsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capsule.swift; sourceTree = "<group>"; };
 		81F00563216D1EDC00770786 /* Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
 		81F0056E216DE92700770786 /* ReKeyGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReKeyGen.swift; sourceTree = "<group>"; };
+		93B007F5CD51A80140471D2E /* Pods-SwiftUmbral_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUmbral_iOS.release.xcconfig"; path = "Target Support Files/Pods-SwiftUmbral_iOS/Pods-SwiftUmbral_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		9663FFFA02F502E0681F29A2 /* Pods-SwiftUmbral_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUmbral_iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUmbral_iOSTests/Pods-SwiftUmbral_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C30DDD34E8410C047EA41B2 /* Pods-SwiftUmbralTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUmbralTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftUmbralTests/Pods-SwiftUmbralTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FE133F143BAF8DB47ADC8D3 /* Pods_SwiftUmbral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUmbral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AFF74B2F3072908C11326B /* Pods-SwiftUmbral.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUmbral.release.xcconfig"; path = "Target Support Files/Pods-SwiftUmbral/Pods-SwiftUmbral.release.xcconfig"; sourceTree = "<group>"; };
+		D6B2AF13A849FAADF374154C /* Pods_SwiftUmbral_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUmbral_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9BD7FEF4A5ED2D544249F55 /* Pods-SwiftUmbral_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUmbral_iOS.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUmbral_iOS/Pods-SwiftUmbral_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0CD6CDF5136BBDD9D67939 /* Pods_SwiftUmbralTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUmbralTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		813F4636216F8F9200BFF958 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF958C57B619A38067362024 /* Pods_SwiftUmbral_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		813F463E216F8F9200BFF958 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				813F4642216F8F9200BFF958 /* SwiftUmbral_iOS.framework in Frameworks */,
+				8CDDE3190BC021D7CEDDA394 /* Pods_SwiftUmbral_iOSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81F0053D216D1BFA00770786 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,8 +130,28 @@
 			children = (
 				9FE133F143BAF8DB47ADC8D3 /* Pods_SwiftUmbral.framework */,
 				FA0CD6CDF5136BBDD9D67939 /* Pods_SwiftUmbralTests.framework */,
+				6A1A90A8DEF11AF164920000 /* Pods_SwiftUmbral_iOS.framework */,
+				D6B2AF13A849FAADF374154C /* Pods_SwiftUmbral_iOSTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		813F463A216F8F9200BFF958 /* SwiftUmbral_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				813F463B216F8F9200BFF958 /* SwiftUmbral_iOS.h */,
+				813F463C216F8F9200BFF958 /* Info.plist */,
+			);
+			path = SwiftUmbral_iOS;
+			sourceTree = "<group>";
+		};
+		813F4645216F8F9200BFF958 /* SwiftUmbral_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				813F4646216F8F9200BFF958 /* SwiftUmbral_iOSTests.swift */,
+				813F4648216F8F9200BFF958 /* Info.plist */,
+			);
+			path = SwiftUmbral_iOSTests;
 			sourceTree = "<group>";
 		};
 		81F00536216D1BFA00770786 = {
@@ -90,6 +159,8 @@
 			children = (
 				81F00542216D1BFA00770786 /* SwiftUmbral */,
 				81F0054D216D1BFB00770786 /* SwiftUmbralTests */,
+				813F463A216F8F9200BFF958 /* SwiftUmbral_iOS */,
+				813F4645216F8F9200BFF958 /* SwiftUmbral_iOSTests */,
 				81F00541216D1BFA00770786 /* Products */,
 				A0179E0E5E2297691AE5FF22 /* Pods */,
 				3D381AC42423518F6B558547 /* Frameworks */,
@@ -101,6 +172,8 @@
 			children = (
 				81F00540216D1BFA00770786 /* SwiftUmbral.framework */,
 				81F00549216D1BFB00770786 /* SwiftUmbralTests.xctest */,
+				813F4639216F8F9200BFF958 /* SwiftUmbral_iOS.framework */,
+				813F4641216F8F9200BFF958 /* SwiftUmbral_iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +227,10 @@
 				C3AFF74B2F3072908C11326B /* Pods-SwiftUmbral.release.xcconfig */,
 				05DB8326E8306280C8B0676E /* Pods-SwiftUmbralTests.debug.xcconfig */,
 				9C30DDD34E8410C047EA41B2 /* Pods-SwiftUmbralTests.release.xcconfig */,
+				D9BD7FEF4A5ED2D544249F55 /* Pods-SwiftUmbral_iOS.debug.xcconfig */,
+				93B007F5CD51A80140471D2E /* Pods-SwiftUmbral_iOS.release.xcconfig */,
+				9663FFFA02F502E0681F29A2 /* Pods-SwiftUmbral_iOSTests.debug.xcconfig */,
+				792DACB3A499F14200CA9F5E /* Pods-SwiftUmbral_iOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -161,6 +238,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		813F4634216F8F9200BFF958 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				813F4659216F906400BFF958 /* SwiftUmbral.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81F0053B216D1BFA00770786 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -172,6 +257,45 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		813F4638216F8F9200BFF958 /* SwiftUmbral_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 813F464E216F8F9200BFF958 /* Build configuration list for PBXNativeTarget "SwiftUmbral_iOS" */;
+			buildPhases = (
+				DAA768C16A8D2E92081BA6BD /* [CP] Check Pods Manifest.lock */,
+				813F4634216F8F9200BFF958 /* Headers */,
+				813F4635216F8F9200BFF958 /* Sources */,
+				813F4636216F8F9200BFF958 /* Frameworks */,
+				813F4637216F8F9200BFF958 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftUmbral_iOS;
+			productName = SwiftUmbral_iOS;
+			productReference = 813F4639216F8F9200BFF958 /* SwiftUmbral_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		813F4640216F8F9200BFF958 /* SwiftUmbral_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 813F464F216F8F9200BFF958 /* Build configuration list for PBXNativeTarget "SwiftUmbral_iOSTests" */;
+			buildPhases = (
+				BBFDD04F7B65B40E6E957AEE /* [CP] Check Pods Manifest.lock */,
+				813F463D216F8F9200BFF958 /* Sources */,
+				813F463E216F8F9200BFF958 /* Frameworks */,
+				813F463F216F8F9200BFF958 /* Resources */,
+				669F99307CB757231F35662C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				813F4644216F8F9200BFF958 /* PBXTargetDependency */,
+			);
+			name = SwiftUmbral_iOSTests;
+			productName = SwiftUmbral_iOSTests;
+			productReference = 813F4641216F8F9200BFF958 /* SwiftUmbral_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		81F0053F216D1BFA00770786 /* SwiftUmbral */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81F00554216D1BFB00770786 /* Build configuration list for PBXNativeTarget "SwiftUmbral" */;
@@ -221,6 +345,12 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Alex Vlasov";
 				TargetAttributes = {
+					813F4638216F8F9200BFF958 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					813F4640216F8F9200BFF958 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					81F0053F216D1BFA00770786 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
@@ -244,11 +374,27 @@
 			targets = (
 				81F0053F216D1BFA00770786 /* SwiftUmbral */,
 				81F00548216D1BFB00770786 /* SwiftUmbralTests */,
+				813F4638216F8F9200BFF958 /* SwiftUmbral_iOS */,
+				813F4640216F8F9200BFF958 /* SwiftUmbral_iOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		813F4637216F8F9200BFF958 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		813F463F216F8F9200BFF958 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81F0053E216D1BFA00770786 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,10 +421,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SwiftUmbralTests/Pods-SwiftUmbralTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/EllipticSwift/EllipticSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/BigInt-macOS/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift-macOS/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/EllipticSwift-macOS/EllipticSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash-macOS/SipHash.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -292,6 +438,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUmbralTests/Pods-SwiftUmbralTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		669F99307CB757231F35662C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUmbral_iOSTests/Pods-SwiftUmbral_iOSTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BigInt-iOS/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift-iOS/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/EllipticSwift-iOS/EllipticSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash-iOS/SipHash.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EllipticSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUmbral_iOSTests/Pods-SwiftUmbral_iOSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C973EEE1353B4A4143C2FB5 /* [CP] Check Pods Manifest.lock */ = {
@@ -310,6 +484,50 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SwiftUmbral-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBFDD04F7B65B40E6E957AEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftUmbral_iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAA768C16A8D2E92081BA6BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftUmbral_iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -341,6 +559,29 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		813F4635216F8F9200BFF958 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				813F4653216F906000BFF958 /* Params.swift in Sources */,
+				813F4658216F906000BFF958 /* CapsuleFragment.swift in Sources */,
+				813F4656216F906000BFF958 /* ReKeyGen.swift in Sources */,
+				813F4654216F906000BFF958 /* Capsule.swift in Sources */,
+				813F4655216F906000BFF958 /* Encapsulate.swift in Sources */,
+				813F4651216F906000BFF958 /* Fragments.swift in Sources */,
+				813F4652216F906000BFF958 /* Keys.swift in Sources */,
+				813F4657216F906000BFF958 /* Reencapsulator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		813F463D216F8F9200BFF958 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81D8C778216F923C00D44A4C /* SwiftUmbral_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81F0053C216D1BFA00770786 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,6 +608,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		813F4644216F8F9200BFF958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 813F4638216F8F9200BFF958 /* SwiftUmbral_iOS */;
+			targetProxy = 813F4643216F8F9200BFF958 /* PBXContainerItemProxy */;
+		};
 		81F0054C216D1BFB00770786 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 81F0053F216D1BFA00770786 /* SwiftUmbral */;
@@ -375,6 +621,110 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		813F464A216F8F9200BFF958 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9BD7FEF4A5ED2D544249F55 /* Pods-SwiftUmbral_iOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 62V9CKQN89;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftUmbral_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "shamatar.SwiftUmbral-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		813F464B216F8F9200BFF958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93B007F5CD51A80140471D2E /* Pods-SwiftUmbral_iOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 62V9CKQN89;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftUmbral_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "shamatar.SwiftUmbral-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		813F464C216F8F9200BFF958 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9663FFFA02F502E0681F29A2 /* Pods-SwiftUmbral_iOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62V9CKQN89;
+				INFOPLIST_FILE = SwiftUmbral_iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "shamatar.SwiftUmbral-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		813F464D216F8F9200BFF958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 792DACB3A499F14200CA9F5E /* Pods-SwiftUmbral_iOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62V9CKQN89;
+				INFOPLIST_FILE = SwiftUmbral_iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "shamatar.SwiftUmbral-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		81F00552216D1BFB00770786 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -596,6 +946,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		813F464E216F8F9200BFF958 /* Build configuration list for PBXNativeTarget "SwiftUmbral_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				813F464A216F8F9200BFF958 /* Debug */,
+				813F464B216F8F9200BFF958 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		813F464F216F8F9200BFF958 /* Build configuration list for PBXNativeTarget "SwiftUmbral_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				813F464C216F8F9200BFF958 /* Debug */,
+				813F464D216F8F9200BFF958 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		81F0053A216D1BFA00770786 /* Build configuration list for PBXProject "SwiftUmbral" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
