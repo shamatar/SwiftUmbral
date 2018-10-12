@@ -1,0 +1,6 @@
+framework module Pods_SwiftUmbral_iOS {
+  umbrella header "Pods-SwiftUmbral_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module EllipticSwift {
+  umbrella header "EllipticSwift-macOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
